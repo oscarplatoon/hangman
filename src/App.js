@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Words from './words.js';
 import DisplayPuzzle from './components/DisplayPuzzle.js'
 import DisplayGuessedLetters from './components/DisplayGuessedLetters.js';
@@ -11,25 +11,25 @@ function App (props) {
 
   let textInput = React.createRef();
 
-function handleClick() {
-  let inputText = textInput.current.value
-  if (inputText.length > 1) {
-    alert("Hey, one letter at a time!")
+  function handleClick() {
+    let inputText = textInput.current.value
+    if (inputText.length > 1) {
+      alert("Hey, one letter at a time!")
+      textInput.current.value = '';
+      return null
+    } else if (inputText.length === 0) {
+      alert("Hey, you can't just submit nothin'!")
+      return null
+    } else if (guessedLetters.includes(inputText)) {
+      alert('You guessed that already!')
+      return null
+    } else {
+      setGuessedLetters([...guessedLetters,inputText]);
+    }
     textInput.current.value = '';
-    return null
-  } else if (inputText.length === 0) {
-    alert("Hey, you can't just submit nothin'!")
-    return null
-  } else if (guessedLetters.includes(inputText)) {
-    alert('You guessed that already!')
-    return null
-  } else {
-    setGuessedLetters([...guessedLetters, textInput.current.value]);
+    console.log(guessedLetters)
+    return guessedLetters
   }
-  textInput.current.value = '';
-  console.log(guessedLetters)
-  return guessedLetters
-}
 
 const UserInput = () => {
   return (
@@ -45,18 +45,19 @@ const UserInput = () => {
 
   return (
     <div className="App">
-      <h1> Welcome to the Pair Programmed Edition Hangman! </h1>
+      <h1> Welcome to the Diet Edition Hangman! </h1>
+      <h4> Some of the function, none of the fun! </h4>
+     {/* Display letter guesses that didn't work: */}
+      <div> 
+        <DisplayGuessedLetters puzzle={puzzle} guessedLetters={guessedLetters} />
+      </div>
      {/* Display a puzzle word letters separated by spaces blanks for unknown: */}
       <DisplayPuzzle puzzle={puzzle} guessedLetters={guessedLetters} />
-     {/* Display letter guesses that didn't work: */}
       {/* Text Input and a button to submit */}
       <div> 
         <UserInput />
       </div>
       <br/>
-      <div> 
-        <DisplayGuessedLetters guessedLetters={guessedLetters} />
-      </div>
     </div>
   );
 }

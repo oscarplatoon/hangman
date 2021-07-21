@@ -27,9 +27,6 @@ function DisplayPuzzle(props) {
 
   return(
     <div>
-      <br />
-      {puzzle}
-      <br/>
       <DisplayPuzzle />
     </div>
   )
