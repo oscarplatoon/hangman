@@ -1,20 +1,30 @@
 import React from "react"
 
-const DisplayPuzzle = (props) => {
+function DisplayPuzzle(props) {
   const { puzzle, guessedLetters } = props
 
   const DisplayPuzzle = () => {
     const puzzleArr = puzzle.split('')
-    
-    return puzzleArr.map((letter,index) => {
-      if (letter in guessedLetters){
+    console.log('puzzle array is: ', puzzleArr)
+    let puzzleElements = puzzleArr.map((letter,index) => {
+      console.log(typeof(letter))
+      console.log(guessedLetters.includes(letter))
+      if (guessedLetters.includes(letter)){
+        console.log('Good Guess')
         return (<span className='strong' key={index} value={letter}> {letter} </span>)
       } else {
         return (<span key={index} value=''>_</span>)
       }
     })
+    return (
+      <div>
+        {
+          puzzleElements
+        }
+      </div>
+    )  
   }
-  console.log('Guessed Letters:', guessedLetters)
+
   return(
     <div>
       <br />
