@@ -1,63 +1,70 @@
-Hangman!
-===================
-In this exercise, you will recreate the word game Hangman.
+# Getting Started with Create React App
 
-In addition to building the app end-to-end independently, you'll learn the power of chaining array transformations (like map and filter) - a pillar of functional programming.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Primary Objectives
--------------
-The interface should contain the following components:
-* A component that displays the puzzle word (letters should be separated by spaces).  Letters that haven't been guessed should be displayed as an underscore - letters that have been guessed should be displayed.
-* A component that contains a text input and a button to submit the guessed letter.  If the letter submitted has already been guessed, display an `alert()`.
-* A component that displays letters that are not part of the puzzle word.
+## Available Scripts
 
-One last requirement: there should only be two properties within `App.js`'s state:
+In the project directory, you can run:
 
- - **puzzle** - this should be the puzzle word (a string)
- - **guessedLetters** - this should be an array of all the letters that were guessed.
+### `npm start`
 
-A JSON array is below - store it and import it appropriately in the codebase you create.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Secondary Objectives
--------------
-* If someone guesses more 6 letters that aren't part of the word, an alert displaying that the game is over should be displayed.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
+### `npm test`
 
-Hints
------
-* Don't forget `split()` and `join()`
-* You surely will also use the Array object's `map()` and `filter()` functions.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-Words
------
-```
-[
-  "marriageproof",
-  "minionette",
-  "unlichened",
-  "electrocardiographic",
-  "hippophagy",
-  "polyphore",
-  "debellate",
-  "zyga",
-  "antedonin",
-  "hirudinean",
-  "foremastman",
-  "metapolitics",
-  "bianisidine",
-  "gros",
-  "superindifferent",
-  "collar",
-  "maculose",
-  "unphysically",
-  "narrowish",
-  "Bartonia",
-  "inadherent",
-  "arbitrary",
-  "forefeelingly",
-  "palame",
-  "vina",
-  "northwestward"
-]
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

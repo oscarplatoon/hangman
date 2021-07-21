@@ -1,0 +1,50 @@
+.parent {
+  display: flex;
+  flex-flow: row;
+}
+
+.parent > * {
+  border: solid 2px black;
+  margin: 20px;
+}
+
+.center {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrong-text {
+  color: #cc0000;
+}
+
+.missing-text {
+  color: #aaaaaa;
+}
+
+.correct-text {
+  color: #00bb00
+}
+
+#input-section {
+  height: 60px;
+  background-color: #00ccff;
+  padding: 12px;
+}
+
+#puzzle-section {
+  padding: 12px;
+}
+
+#output-section {
+  background-color: #eeeeee;
+  padding: 12px;
+}
+
+
+#incorrect-guesses {
+  font-weight: 700;
+}
+
+
